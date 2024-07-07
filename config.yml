@@ -1,4 +1,4 @@
-baseURL: ''
+baseURL: 'https://gilgames-livros.netlify.app/'
 title: GILGAMEŜ livros
 paginate: 5
 theme: PaperModX
@@ -21,7 +21,8 @@ params:
   disableAnchoredHeadings: true
   images: ['cover.png']
   DateFormat: '2006-01-02'
-  useCustomAnalytics: true
+  # Defini como false pois criou problemas no deploy. Depois devo mudar para ter acesso ao SEO, mas tenho de preencher o custom_analytics.html com o Tracking_ID
+  useCustomAnalytics: false
 
   defaultTheme: auto
   # disableThemeToggle: true
