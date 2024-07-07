@@ -1,0 +1,42 @@
+:root {
+  --theme: #e6d6d6; /* Fundo claro - cinza claro */
+  --entry: #d1c2c2; /* Cor de entrada - cinza claro */
+  --primary: #2c3e50; /* Letras douradas */
+  --secondary: #2c3e50; /* Dourado para destaque secundário */
+  --tertiary: #2c3e50; /* Preto para texto principal */
+  --content: #2c3e50; /* Cor de conteúdo - preto */
+  --hljs-bg: #e2d8d8; /* Fundo para destaque de código - cinza mais claro */
+  --code-bg: #c7bebe; /* Fundo para bloco de código - cinza claro */
+  --border: #2c3e50; /* Cor de borda - verde escuro */
+}
+
+.dark {
+  --theme: #2c3e50; /* Fundo escuro - azul escuro */
+  --entry: #2c3e50; /* Cor de entrada - azul escuro */
+  --primary: #a18423; /* Letras douradas */
+  --secondary: #a18423; /* Dourado para destaque secundário */
+  --tertiary: #bdc3c7; /* Cinza claro para texto principal */
+  --content: #bdc3c7; /* Cor de conteúdo - cinza claro */
+  --hljs-bg: #34495e; /* Fundo para destaque de código - azul mais claro */
+  --code-bg: #2c3e50; /* Fundo para bloco de código - azul escuro */
+  --border: #a18423; /* Cor de borda - dourado */
+}
+
+body {
+  background-color: var(--theme);
+  color: var(--tertiary); /* Cor principal de texto */
+}
+
+.dark-mode body {
+  background-color: var(--theme);
+  color: var(--tertiary); /* Cor principal de texto */
+}
+
+.image-padding {
+  padding-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.post-thumbnail img {
+  max-width: 200px; /* Defina o tamanho máximo que deseja para as imagens */
+  height: auto; /* Para manter a proporção da imagem */
+}

@@ -1,4 +1,145 @@
-baseURL: 'https://example.org/'
-languageCode: 'en-us'
-title: 'My New Hugo Site'
-theme: 'PaperModX'
+baseURL: ''
+title: GILGAMEŜ livros
+paginate: 5
+theme: PaperModX
+# NOTE remove this line if you copy exampleSite out of hugo-PaperModX
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+params:
+  description: 'Theme PaperModX - https://github.com/reorx/hugo-PaperModX'
+  author:
+    - Reorx
+  mainSections:
+    - docs
+    - posts
+  disableAnchoredHeadings: true
+  images: ['cover.png']
+  DateFormat: '2006-01-02'
+  useCustomAnalytics: true
+
+  defaultTheme: auto
+  # disableThemeToggle: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowWordCount: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: true
+  TocSide: 'right'
+  EnableInstantClick: true
+  EnableImageZoom: true
+
+  commentSystems:
+    disqus:
+      shortname: reorx
+    remark42:
+      url: https://remark42.reorx.com
+      site: reorx.github.io
+    telegramWidget:
+      channel: reorx_share
+      accentColor: '9077e1'
+      limit: 20
+  defaultCommentSystems:
+    remark42: false
+
+  profileMode:
+    enabled: false
+    title: PaperModX
+    imageUrl: '#'
+    imageTitle: my image
+    imageWidth: 300
+    imageHeight: 300
+    buttons:
+      - name: Archives
+        url: /archives/
+      - name: Tags
+        url: /tags/
+      - name: Categories
+        url: /categories/
+      - name: Docs
+        url: /docs/
+      - name: Artigo
+        url: /artigo/
+
+  homeInfoParams:
+    Title: 'Bem-vindos à GILGAMEŜ livros'
+    Content: |
+      Este website é tem como propósito dar a conhecer algumas das publicações que temos à venda. Consulte os nossos livros na nossa página de Instagram @gilgames-livros.
+
+    Image: /image/gilgamesh.webp
+
+  socialIcons:
+    - name: instagram
+      url: 'https://www.instagram.com/gilgames_livros/'
+
+  editPost:
+    URL: 'https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content'
+    Text: 'Suggest Changes' # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  label:
+    text: 'Home'
+    icon: icon.png
+    iconHeight: 35
+
+  assets:
+    favicon: '<link / abs url>'
+    favicon16x16: '<link / abs url>'
+    favicon32x32: '<link / abs url>'
+    apple_touch_icon: '<link / abs url>'
+    safari_pinned_tab: '<link / abs url>'
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  # fuseOpts:
+  #     isCaseSensitive: false
+  #     shouldSort: true
+  #     location: 0
+  #     distance: 1000
+  #     threshold: 0.4
+  #     minMatchCharLength: 0
+  #     keys: ["title", "permalink", "summary", "content"]
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+languages:
+  en:
+    languageName: 'Português'
+    weight: 1
+    menu:
+      main:
+        # Remoção da Newsletter e Docs do site
+        # - name: Newsletter
+        #   url: /newsletter/
+        #   weight: 1
+        - name: Tags
+          url: /tags/
+          weight: 4
+        - name: Categorias
+          url: /categories/
+          weight: 5
+        - name: Arquivo
+          url: /archives/
+          weight: 6
+        # - name: Search
+        #   url: /search/
+        #   weight: 10
+        - name: 'Loja Online'
+          url: 'https://www.instagram.com/gilgames_livros/'
+          params:
+            external: true
