@@ -136,9 +136,9 @@ languages:
         - name: Arquivo
           url: /archives/
           weight: 6
-        - name: Pesquisa
-          url: /search/
-          weight: 10
+        # - name: Pesquisa
+        #   url: /search/
+        #   weight: 10
         - name: 'Instagram'
           url: 'https://www.instagram.com/gilgames_livros/'
           params:
