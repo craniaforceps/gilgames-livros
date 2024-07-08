@@ -1,5 +1,5 @@
 ---
-title: "'Discurso do Método' e 'As Paixões da Alma' de René Descartes"
+title: "'O Livro Azul' de Ludwig Wittgenstein"
 date: 2024-07-06
 tags:
   - O Livro Azul

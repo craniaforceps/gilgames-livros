@@ -26,17 +26,16 @@ params:
 
   defaultTheme: auto
   # disableThemeToggle: true
-  ShowShareButtons: true
-  ShowReadingTime: true
-  ShowWordCount: true
+  ShowShareButtons: false
+  ShowReadingTime: false
+  ShowWordCount: false
   # disableSpecial1stPost: true
-  displayFullLangName: true
+  displayFullLangName: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowToc: true
   TocOpen: true
-  TocSide: 'right'
   EnableInstantClick: true
   EnableImageZoom: true
 
@@ -75,7 +74,7 @@ params:
   homeInfoParams:
     Title: 'Bem-vindos à GILGAMEŜ livros'
     Content: |
-      Este website é tem como propósito dar a conhecer algumas das publicações que temos à venda. Consulte os nossos livros na nossa página de Instagram @gilgames-livros.
+      Somos um projecto alfarrabista que se dedica à venda de livros usados e novos. O nosso objectivo é promover a leitura e a cultura, disponibilizando livros a preços acessíveis. Visite o nosso Instagram @gilgames_livros.
 
     Image: /image/gilgamesh.webp
 
@@ -137,10 +136,10 @@ languages:
         - name: Arquivo
           url: /archives/
           weight: 6
-        # - name: Search
-        #   url: /search/
-        #   weight: 10
-        - name: 'Loja Online'
+        - name: Pesquisa
+          url: /search/
+          weight: 10
+        - name: 'Instagram'
           url: 'https://www.instagram.com/gilgames_livros/'
           params:
             external: true
