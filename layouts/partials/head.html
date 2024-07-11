@@ -4,6 +4,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 />
+
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 <meta name="robots" content="index, follow" />
 {{- else }}
@@ -13,19 +14,23 @@
 }}
 <title>{{ $pageTitle }}</title>
 
-{{- /* Meta */}} {{- if .IsHome }} {{ with site.Params.keywords -}}<meta
+{{- /* Meta */}} {{- if .IsHome }} {{ with site.Params.keywords -}}
+<meta
   name="keywords"
   content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}"
-/>{{ end }} {{- else }}
+/>
+{{ end }} {{- else }}
 <meta
   name="keywords"
   content="{{ if .Params.keywords -}}
-    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
-    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}"
+    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- else }}
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+  {{- end -}}"
 />
 {{- end }} <meta name="description" content="{{- with .Description }}{{ . }}{{-
-else }}{{- if or .IsPage .IsSection}} {{- .Summary | default (printf "%s - %s"
-.Title site.Title) }}{{- else }} {{- with site.Params.description }}{{ . }}{{-
+else }}{{- if or .IsPage .IsSection}}{{- .Summary | default (printf "%s - %s"
+.Title site.Title) }}{{- else }}{{- with site.Params.description }}{{ . }}{{-
 end }}{{- end }}{{- end -}}"> <meta name="author" content="{{ (partial
 "author.html" . ) }}"> <link rel="canonical" href="{{ if .Params.canonicalURL
 -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end
@@ -73,10 +78,31 @@ minify }} {{- if not site.Params.assets.disableFingerprinting }} {{- $stylesheet
   rel="preload stylesheet"
   as="style"
 />
-{{- end }} {{- /* Favicons */}} <link rel="icon" href="{{ site.Params.favicon |
-default "favicon.ico" | absURL }}"> <link rel="apple-touch-icon" href="{{
-site.Params.appleTouchIcon | default "apple-touch-icon.png" | absURL }}"> {{- /*
-RSS */}} {{ range .AlternativeOutputFormats -}}
+{{- end }} {{- /* Favicons */}} <link rel="icon" href="{{
+site.Params.assets.favicon | default "favicon.ico" | absURL }}" />
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="{{ site.Params.assets.favicon16x16 | absURL }}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="{{ site.Params.assets.favicon32x32 | absURL }}"
+/>
+<link
+  rel="apple-touch-icon"
+  href="{{ site.Params.assets.apple_touch_icon | absURL }}"
+/>
+<link
+  rel="mask-icon"
+  href="{{ site.Params.assets.safari_pinned_tab | absURL }}"
+  color="#5bbad5"
+/>
+
+{{- /* RSS */}} {{ range .AlternativeOutputFormats -}}
 <link
   rel="{{ .Rel }}"
   type="{{ .MediaType.Type | html }}"
@@ -86,9 +112,9 @@ RSS */}} {{ range .AlternativeOutputFormats -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
 {{ end -}} {{- /* Misc */}} {{- if hugo.IsProduction | or (eq site.Params.env
 "production") }} {{- if site.GoogleAnalytics }} {{- template
-"_internal/google_analytics.html" . }} {{- end -}} {{- if
+"_internal/google_analytics.html" . }} {{- end }} {{- if
 site.Params.useCustomAnalytics }} {{- partialCached "custom_analytics.html" .
-"custom_analytics.html" }} {{- end -}} {{- end -}} {{- /*
+"custom_analytics.html" }} {{- end }} {{- end }} {{- /*
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started
 */}} {{- if .Params.cover.image }}
 <meta name="twitter:card" content="summary_large_image" />
@@ -98,8 +124,9 @@ https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-
 <meta name="twitter:title" content="{{ $pageTitle }}" />
 <meta
   name="twitter:description"
-  content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"
 />
+
 {{- with site.Params.socialAccounts.twitter }}
 <meta name="twitter:site" content="@{{ .username }}" />
 <meta name="twitter:creator" content="@{{ .username }}" />
