@@ -6,6 +6,6 @@
 - Implementado um CMS através do Decap;
 - Falta implementar **pesquisa** e **newsletter**
 
-## Deploy feito em Netlify
+## Deploy em Netlify
 
-- Gilgameŝ livros(https://gilgames-livros.netlify.app/)
+- [Gilgameŝ livros](https://gilgames-livros.netlify.app/)
