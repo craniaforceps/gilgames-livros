@@ -5,7 +5,12 @@
 - Mudança nas cores e estilos;
 - Foi acrescentada uma imagem ao início da página;
 - Implementado um CMS através do Decap;
-- Falta implementar **pesquisa** e **newsletter**;
+
+## Futuras implementações
+
+- **Pesquisa** - ver documentação;
+- **Newsletter** - criar backend para o efeito;
+- **loja online** - ver que tipo de ferramentas podem ser integradas com Hugo;
 
 ## Deploy em Netlify
 
