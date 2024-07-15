@@ -2,6 +2,7 @@
 
 ## Mudanças feitas no theme PaperModX:
 
+- Mudança nas cores e estilos;
 - Foi acrescentada uma imagem ao início da página;
 - Implementado um CMS através do Decap;
 - Falta implementar **pesquisa** e **newsletter**;
