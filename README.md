@@ -8,4 +8,4 @@
 
 ## Deploy feito em Netlify
 
-- [Gilgameŝ livros]([https://link-url-here.org](https://gilgames-livros.netlify.app/)
+- [Gilgameŝ livros]((https://gilgames-livros.netlify.app/)
