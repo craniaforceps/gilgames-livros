@@ -1,10 +1,10 @@
 # Site em Hugo: Gilgameŝ livros
 
-## Template do tema PaperModX
+## Mudanças feitas no theme PaperModX:
 
 - Foi acrescentada uma imagem ao início da página;
 - Implementado um CMS através do Decap;
-- Falta implementar **pesquisa** e **newsletter**
+- Falta implementar **pesquisa** e **newsletter**;
 
 ## Deploy em Netlify
 
